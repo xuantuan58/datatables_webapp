@@ -1,0 +1,154 @@
+
+table.display thead tr th {
+	padding: 0px;
+}
+
+table.display thead tr:first-child  th {
+	padding-right: 15px;
+}
+
+table.display thead th:first-child {
+	border-bottom: none;
+	border-right: 1px solid #E0E0E0;
+}
+
+table.display thead th.disableHeader {
+	border-bottom: none;
+	border-right: 1px solid #E0E0E0;
+}
+
+table.display thead th:nth-child(2) {
+	border-left: 1px solid #E0E0E0;
+	border-left/*\**/:  none\9;
+}
+
+table.display tr.odd {
+	background-color: #FFFFFF;
+}
+
+table.display tr.even {
+	background-color: #F3F3F3;
+}
+
+table.display thead tr th  span{
+	width:100%;
+}
+
+table.display thead tr th  span input{
+	width:100%;
+	width/*\**/:  96%\9;
+}
+
+table.display thead tr th  span select{
+	width:100%;
+}
+table.display thead tr th  span select:last-child{
+	border-bottom: 1px solid #000;
+}
+table.display tbody tr td {
+	/*white-space:nowrap;*/
+}
+
+.center{
+	text-align: center;
+}
+
+/*.cIcon{
+	width:30px;
+}
+
+.cInstance{
+	width:50px;
+}
+
+.cModel{
+	width:50px;
+}
+
+.cCurrentStep{
+	width:50px;
+}*/
+
+.cStatus{
+	text-align: center;
+	/*width:70px;*/
+}
+
+.cDate{
+	text-align: center;
+	/*width:50px;*/
+}
+
+/*.cSubmitter{
+	width:70px;
+}
+
+.cStepParts{
+	//align: center;
+	width:15%;
+}
+
+.cDelete{
+	width:10px;
+}*/
+
+/*th.imgFilter{
+	padding-right:50px;
+}*/
+
+/*.dateFilter  span input{
+  width: 70px;
+}*/
+
+/*th.dateFilter  span{
+  width: 70%;
+}
+
+th.dateFilter  span input{
+  width: 70%;
+}*/
+
+.dataTables_info {
+    float: left;
+    width: 73%;
+	
+}
+.page_wrapper { 
+	float:right; 
+	width:  290px;
+}
+div#processManager_paginate {
+    float: left;
+   /* width: 15%;*/
+	color: #FF0000;
+	
+	text-align: center;
+}
+
+.dataTables_length {
+	/*float:right;*/
+    /*width: 15%;*/
+	text-align:right;
+	margin-left:14px;
+}
+
+div#reset {
+	float: right;
+	padding-right:10px;
+    width: 9%;
+}
+
+div.info_wrapper {
+	margin: 0px auto;
+	display: inline-table;
+	white-space: nowrap;
+	width:100%;
+}
+
+#processManager_wrapper{
+	width: 100%;		
+}
+
+div.imgPicker img{
+	align: top;
+}
