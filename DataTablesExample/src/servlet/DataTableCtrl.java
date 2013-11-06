@@ -34,7 +34,7 @@ public class DataTableCtrl extends HttpServlet {
 		if(side != null && side.equals("client")){
 			DataTable<StudentAccount> table = new DataTable<>(StudentAccount.class);
 			table.bServerSide = false;
-			table.bJQueryUI = true;
+			//table.bJQueryUI = true;
 			table.bDestroy = true;
 			tableWrapper.setDataHandler(StudentAccDataHandler.class);
 			
@@ -43,7 +43,7 @@ public class DataTableCtrl extends HttpServlet {
 		else if(side != null && side.equals("server")){
 			DataTable<Student> table = new DataTable<>(Student.class);
 			table.bServerSide = true;
-			table.bJQueryUI = true;
+			//table.bJQueryUI = true;
 			table.bDestroy = true;
 			table.sPaginationType = "full_numbers";
 			table.fnServerData = new FnCallBack("fnDataTablesPipeline");

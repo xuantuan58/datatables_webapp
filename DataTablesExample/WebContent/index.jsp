@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="js/jquery/plugin/ui/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="js/jquery/plugin/data_table/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link rel="stylesheet" type="text/css" href="js/jquery/plugin/data_table/complete.css">
 
 <script type="text/javascript" language="javascript" src="js/jquery/jquery-1.8.3.js"></script>
-<script type="text/javascript" language="javascript" src="js/jquery/plugin/jquery-ui-1.9.2.custom.js"></script>
 <script type="text/javascript" language="javascript" src="js/jquery/plugin/data_table/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="js/jquery/plugin/data_table/jquery.dataTables.plugins.js"></script>
+
 <script language="javascript" type="text/javascript">
 
 var oTable;
@@ -51,6 +51,6 @@ $(document).ready(function(){
 <input type="button" id="btnClient" value="Create Static Data Table" />
 <input type="button" id="btnServer" value="Create Dynamic Data Table" /> 
 
-<table width="100%" id="testTable"></table>
+<table width="100%" id="testTable" class="pretty"></table>
 </body>
 </html>
