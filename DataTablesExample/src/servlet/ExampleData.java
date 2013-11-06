@@ -9,6 +9,11 @@ import net.datatables.wrapper.AjaxRequest;
 import model.Student;
 import model.StudentAccount;
 
+/**
+ * This class only gives example data
+ * @author xuantuan.bui
+ *
+ */
 public class ExampleData {
 	public static List<Student> filterStudents(AjaxRequest tableReq) {
 

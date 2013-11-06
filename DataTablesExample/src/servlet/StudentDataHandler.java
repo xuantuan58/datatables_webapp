@@ -9,6 +9,14 @@ import net.datatables.wrapper.IDataHandler;
 
 import model.Student;
 
+/**
+ * Data handler for Student class.
+ * Note: the table was initialized as server side
+ * the ItotalRecords method must return the size of origin list.
+ * the ITotalDisplayRecords method must return size of list after filtered.
+ * @author xuantuan.bui
+ *
+ */
 public class StudentDataHandler implements IDataHandler<Student> {
 	List<Student> list;
 	int itotalRecords;

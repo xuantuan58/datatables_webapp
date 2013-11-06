@@ -16,6 +16,7 @@
 
 var oTable;
 function renderTable(data){
+	//destroy datatable if exist. 
 	if(oTable != null){
 		oTable.fnDestroy();
 		oTable.empty();
