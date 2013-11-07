@@ -1,13 +1,10 @@
 package servlet;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import net.datatables.wrapper.AjaxRequest;
-
 import model.Student;
-import model.StudentAccount;
+import net.datatables.wrapper.AjaxRequest;
 
 /**
  * This class only gives example data
@@ -30,7 +27,7 @@ public class ExampleData {
 
 	public static List<Student> getAllStudents() {
 		List<Student> students = new ArrayList<Student>();
-		students.add(new Student(1, "tu3an", 30, "120070903", "qNo Trang Long1"));
+		students.add(new Student(1, "tu3an", 30, "120070903", null));
 		students.add(new Student(2, "tua4n", 31, "210070902", "Nqo Trang Lon3"));
 		students.add(new Student(3, "1tuan", 32, "201070901", "Noq Trang Lon4"));
 		students.add(new Student(4, "t2uan", 33, "200170904", "No qTrang Lon5"));
@@ -211,27 +208,5 @@ public class ExampleData {
 		students.add(new Student(59, "tuanp", 36, "200670907", "No Trang nLon8"));
 		students.add(new Student(60, "tuaxn", 36, "200760907", "No Trang Lnon8"));
 		return students;
-	}
-
-	public static List<StudentAccount> getAllStudentsAcc() {
-		List<StudentAccount> accList = new ArrayList<StudentAccount>();
-		accList.add(new StudentAccount(1, "qtuan", "a1234456789", new Date(), new Date()));
-		accList.add(new StudentAccount(2, "tquan", "1a23456789", new Date(), new Date()));
-		accList.add(new StudentAccount(3, "tuqan", "12aa3456789", new Date(), new Date()));
-		accList.add(new StudentAccount(4, "tuaqn", "1234a56789", new Date(), new Date()));
-		accList.add(new StudentAccount(5, "wtuan", "12345a6789", new Date(), new Date()));
-		accList.add(new StudentAccount(6, "twuan", "123456a789", new Date(), new Date()));
-		accList.add(new StudentAccount(7, "tuwan", "1234567a89", new Date(), new Date()));
-		accList.add(new StudentAccount(8, "tuawn", "12345678a9", new Date(), new Date()));
-		accList.add(new StudentAccount(9, "tuanw", "t123456789", new Date(), new Date()));
-		accList.add(new StudentAccount(10, "etuan", "t123456789", new Date(), new Date()));
-		accList.add(new StudentAccount(11, "teuan", "1t23456789", new Date(), new Date()));
-		accList.add(new StudentAccount(12, "tuean", "12t3456789", new Date(), new Date()));
-		accList.add(new StudentAccount(13, "tuaen", "123t456789", new Date(), new Date()));
-		accList.add(new StudentAccount(14, "tuane", "1234t56789", new Date(), new Date()));
-		accList.add(new StudentAccount(15, "rtuan", "12345t6789", new Date(), new Date()));
-		accList.add(new StudentAccount(16, "truan", "123456t789", new Date(), new Date()));
-		accList.add(new StudentAccount(17, "turan", "1234567t89", new Date(), new Date()));
-		return accList;
 	}
 }

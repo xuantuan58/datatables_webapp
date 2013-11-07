@@ -7,11 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Student;
 import net.datatables.wrapper.DataTableWrapper;
 import net.datatables.wrapper.model.DataTable;
 import net.datatables.wrapper.model.FnCallBack;
-import model.Student;
-import model.StudentAccount;
 
 
 /**
@@ -28,30 +27,17 @@ public class DataTableCtrl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String side = request.getParameter("side");
 		DataTableWrapper tableWrapper = new DataTableWrapper();
+		DataTable<Student> table = new DataTable<>(Student.class);
 		
-		if(side != null && side.equals("client")){
-			DataTable<StudentAccount> table = new DataTable<>(StudentAccount.class);
-			table.bServerSide = false;
-			//table.bJQueryUI = true;
-			table.bDestroy = true;
-			tableWrapper.setDataHandler(StudentAccDataHandler.class);
-			
-			tableWrapper.setDataTable(table);
-		}
-		else if(side != null && side.equals("server")){
-			DataTable<Student> table = new DataTable<>(Student.class);
-			table.bServerSide = true;
-			//table.bJQueryUI = true;
-			table.bDestroy = true;
-			table.sPaginationType = "full_numbers";
-			table.fnServerData = new FnCallBack("fnDataTablesPipeline");
-			
-			tableWrapper.setDataHandler(StudentDataHandler.class);
-			tableWrapper.setDataTable(table);
-		}
+		table.bServerSide = true;
+		table.bDestroy = true;
+		table.sPaginationType = "full_numbers";
+		table.fnServerData = new FnCallBack("fnDataTablesPipeline");
 		
+		tableWrapper.setDataHandler(StudentDataHandler.class);
+		tableWrapper.setDataTable(table);
+
 		try {
 			tableWrapper.wrap(request, response);
 		} catch (Exception e) {

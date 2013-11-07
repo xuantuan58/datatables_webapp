@@ -1,21 +1,30 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 import net.datatables.wrapper.annotation.AoColumn;
 
 public class Student {
 	@AoColumn(sTitle = "ID")
 	private int id;
 	
+	/**
+	 * added annotation  @JsonInclude(Include.ALWAYS) in order not to ignore this value if it's null.
+	 */
 	@AoColumn(sTitle = "Name")
+	@JsonInclude(Include.ALWAYS)
 	private String name;
 	
 	@AoColumn(sTitle = "Age")
 	private int age;
 	
 	@AoColumn(sTitle = "Class")
+	@JsonInclude(Include.ALWAYS)
 	private String clazz;
 	
 	@AoColumn(sTitle = "Address", bSearchable = false)
+	@JsonInclude(Include.ALWAYS)
 	private String address;
 	
 	public Student(){}
