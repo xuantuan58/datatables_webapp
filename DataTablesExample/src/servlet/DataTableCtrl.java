@@ -30,7 +30,7 @@ public class DataTableCtrl extends HttpServlet {
 		DataTableWrapper tableWrapper = new DataTableWrapper();
 		DataTable<Student> table = new DataTable<>(Student.class);
 		
-		table.bServerSide = true;
+		//table.bServerSide = true;
 		table.bDestroy = true;
 		table.sPaginationType = "full_numbers";
 		table.fnServerData = new FnCallBack("fnDataTablesPipeline");
