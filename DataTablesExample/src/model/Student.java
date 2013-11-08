@@ -9,9 +9,6 @@ public class Student {
 	@AoColumn(sTitle = "ID")
 	private int id;
 	
-	/**
-	 * added annotation  @JsonInclude(Include.ALWAYS) in order not to ignore this value if it's null.
-	 */
 	@AoColumn(sTitle = "Name")
 	@JsonInclude(Include.ALWAYS)
 	private String name;

@@ -3,31 +3,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="js/jquery/plugin/data_table/reset-min.css">
-<link rel="stylesheet" type="text/css" href="js/jquery/plugin/data_table/complete.css">
+<link rel="stylesheet" type="text/css" href="js/data_table/reset-min.css">
+<link rel="stylesheet" type="text/css" href="js/data_table/complete.css">
 
-<script type="text/javascript" language="javascript" src="js/jquery/jquery-1.8.3.js"></script>
-<script type="text/javascript" language="javascript" src="js/jquery/plugin/data_table/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/jquery/plugin/data_table/jquery.dataTables.plugins.js"></script>
+<script type="text/javascript" language="javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" language="javascript" src="js/data_table/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/data_table/jquery.dataTables.plugins.js"></script>
 
 <script language="javascript" type="text/javascript">
 	var oTable;
-	function renderTable(data){
-		//Note: Due to limitation of json we cannot add callback code into json, 
-		//therefore JSON.parse will substitute the callback name by callback function which usually defines in plugin file. 
-		oTable = $("#testTable").dataTable(JSON.parse(data, applyCallback)); 
-	}
-	
 	$(document).ready(function(){
 		$.ajax({
-			dataType: "text",			//force ajax return text in order to parse json latter.
+			dataType: "text",//force ajax return text in order to parse json latter.
 			url: "DataTableCtrl", 
-			success: renderTable
+			success: function(data){
+				//custome parse Json
+				var jsonTbl = JSON.parse(data, applyCallback);
+		
+				//create DOM table in memory
+				var DOMTable = $("<table>").attr("class", "pretty");
+				
+				//add dom table into body
+				$("body").append(DOMTable);
+				
+				//init datatables
+				oTable = DOMTable.dataTable(jsonTbl); 
+			}
 		});
 	});
 </script>
 </head>
 	<body>
-		<table width="100%" id="testTable" class="pretty"></table>
 	</body>
 </html>

@@ -25,7 +25,8 @@ public class DataTableCtrl extends HttpServlet {
         super();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+						throws ServletException, IOException {
 		
 		DataTableWrapper tableWrapper = new DataTableWrapper();
 		DataTable<Student> table = new DataTable<>(Student.class);
